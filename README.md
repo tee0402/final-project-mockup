@@ -1,10 +1,10 @@
 # final-project-mockup
 
-# Landing page
+## Landing page
 ![](/doc/landing.png)
 
-# New user landing page/Profile page
+## New user landing page/Profile page
 ![](/doc/profile.png)
 
-# User home page
+## User home page
 ![](/doc/home.png)
