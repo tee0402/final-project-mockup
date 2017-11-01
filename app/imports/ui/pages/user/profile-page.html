@@ -2,47 +2,41 @@
 
 {{#if Template.subscriptionsReady}}
 
-  <div class="ui text container segment">
-    <div class="ui dividing header">
-      Profile
-    </div>
-    <form class="ui equal width form profile-data-form {{ successClass }} {{ errorClass }}">
+  <form class="ui container equal width massive form profile-data-form {{ successClass }} {{ errorClass }}">
 
-      <div class="fields">
-        {{> Text_Form_Control label="First" placeholder="Philip" value=profile.firstName errorMessage=(fieldError "firstName")}}
-        {{> Text_Form_Control label="Last" placeholder="Johnson" value=profile.lastName errorMessage=(fieldError "lastName")}}
+    <h1>What is your address?</h1>
+    {{> Text_Form_Control name="Address" placeholder="Address" value=profile.address errorMessage=(fieldError "address")}}
 
-      </div>
+    <h1>What is your phone number?</h1>
+    {{> Text_Form_Control name="Phone" placeholder="Phone" value=profile.address errorMessage=(fieldError "phone")}}
 
-      <div class="field">
-        {{> Text_Form_Control label="Title" placeholder="Student" value=profile.title errorMessage=(fieldError "title")}}
-        {{> Text_Form_Control label="Picture" placeholder="http://foo.com/shot.jpg" value=profile.picture errorMessage=(fieldError "picture")}}
-      </div>
+    <h1><i class="square outline icon"></i> I can drive</h1>
 
-      <div class="field">
-        {{> Select_Form_Control label="Interests" options=interests errorMessage=(fieldError "interests") multiple=true }}
-      </div>
-
-      <div class="fields">
-
-        {{> Social_Network_Form_Control label="Github" icon="github" placeholder="pmjohnson" value=profile.github errorMessage=(fieldError "github")}}
-        {{> Social_Network_Form_Control label="Facebook" icon="facebook" placeholder="pmjohnson" value=profile.facebook errorMessage=(fieldError "facebook")}}
-        {{> Social_Network_Form_Control label="Instagram" icon="instagram" placeholder="pmjohnson" value=profile.instagram errorMessage=(fieldError "instagram")}}
-
-      </div>
-
-      {{> TextArea_Form_Control label="Bio" value=profile.bio placeholder="Short bio statement here" errorMessage=(fieldError "bio")}}
-
-
-      <button class="ui primary button" type="submit">Submit</button>
-      {{#if displaySuccessMessage}}
-        <div class="ui success message">
-          <p>Profile data successfully updated.</p>
+    <div class="ui segment">
+      <div class="ui grid">
+        <div class="row">
+          <div class="four wide column">
+            {{> Select_Form_Control options=passengers}}
+          </div>
+          <div class="twelve wide column">
+            <h1>people</h1>
+          </div>
         </div>
-      {{/if}}
-    </form>
-  </div>
+      </div>
+      <h3>I can pick them up</h3>
+      <h3><i class="square outline icon"></i> on the way</h3>
+      <h3><i class="square outline icon"></i> near my address</h3>
+    </div>
 
-  {{/if}}
+    <button class="ui primary button" type="submit">Done</button>
+
+    {{#if displaySuccessMessage}}
+      <div class="ui success message">
+        <p>Profile data successfully updated.</p>
+      </div>
+    {{/if}}
+  </form>
+
+{{/if}}
 
 </template>

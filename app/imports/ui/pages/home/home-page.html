@@ -1,0 +1,76 @@
+<template name="Home_Page">
+  {{#if Template.subscriptionsReady}}
+    <div class="ui container">
+
+      <div class="ui grid">
+        <div class="row">
+          <div class="eight wide column">
+            <div class="ui big teal button">Rewards</div>
+            <div class="ui big teal button">Current Ride</div>
+          </div>
+          <div class="eight wide right aligned column">
+            <h1><i class="yellow star icon"></i><i class="yellow star icon"></i><i class="yellow star icon"></i><i class="yellow star icon"></i><i class="yellow empty star icon"></i>4.12<i class="green arrow up icon"></i></h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="eight wide column">
+            <div style="font-size: 80px; border-radius: 20px;" class="ui blue button">Find a Ride</div>
+          </div>
+          <div class="eight wide right aligned column">
+            <div style="font-size: 80px; border-radius: 20px;" class="ui blue button">Offer a Ride</div>
+          </div>
+        </div>
+      </div>
+
+      <h1 class="ui dividing header">Previous Rides</h1>
+      <h2 class="ui header">10/23/17 9:40 AM</h2>
+      <h2 class="ui header">Driver</h2>
+      <div class="ui grid">
+        <div class="row">
+          <div class="eight wide column">
+            <h3 class="ui header">John Smith</h3>
+          </div>
+          <div class="eight wide right aligned column">
+            <h3><i class="green thumbs up icon"></i><i class="red thumbs down icon"></i></h3>
+          </div>
+        </div>
+      </div>
+      <h2 class="ui header">Passengers</h2>
+      <table class="ui striped table">
+        <tr>
+          <td>Philip Johnson</td>
+          <td class="right aligned"><i class="green thumbs up icon"></i><i class="red thumbs down icon"></i></td>
+        </tr>
+        <tr>
+          <td>You</td>
+          <td></td>
+        </tr>
+      </table>
+      <div class="ui divider"></div>
+      <h2 class="ui header">10/20/17 3:24 PM</h2>
+      <h2 class="ui header">Driver</h2>
+      <div class="ui grid">
+        <div class="row">
+          <div class="eight wide column">
+            <h3 class="ui header">You</h3>
+          </div>
+          <div class="eight wide right aligned column">
+            <h3>Done <i class="green checkmark icon"></i></h3>
+          </div>
+        </div>
+      </div>
+      <h2 class="ui header">Passengers</h2>
+      <table class="ui striped table">
+        <tr>
+          <td>Jennifer Chen</td>
+        </tr>
+        <tr>
+          <td>Alice Meyer</td>
+        </tr>
+        <tr>
+          <td>Paul Williams</td>
+        </tr>
+      </table>
+    </div>
+  {{/if}}
+</template>
